@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escape Landscaping | Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    html { font-family: 'Inter', sans-serif; }
+    .adminTime {
+      display: flex;
+      gap: 10px;
+      font-weight: 500;
+      color: #ffaa00;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center bg-green-800 text-white p-4 shadow-md">
+    <h1 class="text-2xl font-bold">ES</h1>
+
+    <div class="flex items-center space-x-6">
+      <div class="adminTime">
+        <span id="time"></span>
+        <span id="day"></span>
+      </div>
+      <a href="index.html" id="signOutBtn" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-md transition">Sign Out</a>
+    </div>
+  </nav>
+
+  <div class="text-start mt-10 text-2xl font-semibold text-green-700">
+    <span id="welcomByTime"></span> <span id="customerName"></span>
+  </div>
+
+  <script type="module" src="customerDashboard.js"></script>
+</body>
+</html>

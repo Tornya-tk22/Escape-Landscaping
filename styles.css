@@ -1,0 +1,466 @@
+/* --- Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary-green: #2e7d32; /* Dominant Green */
+    --color-light-greenish: #f0f6f2; /* Body Background */
+    --color-hover-orange: #ff8c42; /* Subtle Orange Hover */
+    --color-darker-green: #1b5e20; /* Button Hover */
+    --color-card-background: #f0f9f4; /* Card Background */
+    --color-text-dark: #333; /* Dark Text */
+}
+
+body {
+    background-color: var(--color-light-greenish);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: var(--color-primary-green);
+    cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .navLinks li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .navLinks li a {
+        display: block;
+        font-size: 1.1rem;
+    }
+
+    .navLinks.active {
+        max-height: 500px; /* enough height for all links */
+    }
+}
+
+/* ======================================= */
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-primary-green);
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navLinks li a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-primary-green);
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s; 
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.navLinks li:nth-child(1) a { animation-delay: 0.1s; }
+.navLinks li:nth-child(2) a { animation-delay: 0.2s; }
+.navLinks li:nth-child(3) a { animation-delay: 0.3s; }
+.navLinks li:nth-child(4) a { animation-delay: 0.4s; }
+.navLinks li:nth-child(5) a { animation-delay: 0.5s; }
+.navLinks li:nth-child(6) a { animation-delay: 0.6s; }
+
+@keyframes fadeSlideIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.navLinks li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary-green);
+    transition: left 0.3s ease;
+}
+
+.navLinks li a:hover::after { left: 0; }
+.navLinks li a:hover {
+    color: var(--color-hover-orange); 
+    transform: translateY(-2px);
+}
+
+.navLinks li a.signUpBtn {
+    background-color: var(--color-primary-green);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.navLinks li a.signUpBtn::after { content: none; }
+.navLinks li a.signUpBtn:hover {
+    background-color: var(--color-darker-green);
+    transform: translateY(-2px);
+    color: #fff; 
+}
+
+/* ======================================= */
+/* Home Section */
+#homeSection {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    background: url(garden3.jpeg) no-repeat center center/cover;
+    align-items: center;
+    padding-left: 10%;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+#homeSection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(46, 125, 50, 0.45);
+    z-index: 1;
+}
+
+.homeContent {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.homeStatement {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.homeParagraph {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#signUpBtn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: var(--color-primary-green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#signUpBtn:hover {
+    background-color: var(--color-hover-orange);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================================= */
+/* Section Headings */
+section {
+    text-align: left;
+    padding: 80px 50px;
+}
+
+.sectionTitle {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.sectionTitle h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-text-dark); 
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.sectionTitle h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 3px;
+    background-color: var(--color-primary-green);
+    border-radius: 2px;
+}
+
+.sectionTitle p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ======================================= */
+/* Cards */
+.aboutUsCard, .ourServicesCard, .testimonyCard, .donationFormContainer {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 0.95;
+    background: var(--color-card-background);
+    padding: 25px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    will-change: transform, box-shadow, opacity;
+}
+
+.aboutUsCard:hover, .ourServicesCard:hover, .testimonyCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+    opacity: 1;
+}
+
+/* About Us Cards */
+.aboutUsCardHeader i { font-size: 40px; color: #81c784; margin-bottom: 10px; }
+.aboutUsCardHeader h3 { font-size: 1.3rem; margin-bottom: 10px; }
+
+/* Services Cards */
+.ourServicesCard i { font-size: 40px; color: var(--color-primary-green); margin-bottom: 15px; }
+.ourServicesCard h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--color-primary-green); }
+.ourServicesCard p { font-size: 1rem; color: #555; }
+
+/* Testimonials Cards */
+.testimonyCard { padding: 20px 20px 60px 20px; position: relative; min-height: 200px; }
+.testimonialDetails {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonialDetails p {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+.testimonialDetails p:first-child { color: var(--color-primary-green); }
+.testimonialDetails p:last-child { color: var(--color-hover-orange); text-align: right; }
+
+/* ======================================= */
+/* Donation Section */
+#donate { background-color: #e8f5e9; }
+.donationContainer { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px; max-width: 1200px; margin: 0 auto; }
+.donationText { flex: 1 1 400px; max-width: 450px; text-align: left; color: var(--color-primary-green); font-size: 1.1rem; }
+.donationFormContainer {
+    flex: 1 1 350px;
+    max-width: 400px;
+    background-color: #fff;
+    border: 2px solid var(--color-primary-green);
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.donationFormContainer h3 {
+    font-size: 1.6rem;
+    color: var(--color-primary-green);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.donationFormContainer input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.donationFormContainer input:focus { border-color: var(--color-primary-green); outline: none; }
+.donationFormContainer button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color-primary-green);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.donationFormContainer button:hover {
+    background-color: var(--color-hover-orange);
+    transform: translateY(-2px);
+}
+.progressCard {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    background-color: var(--color-card-background);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.progressCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.progressCard p { font-size: 1rem; color: var(--color-text-dark); margin-bottom: 8px; }
+.progressCard h3 { font-size: 2.5rem; color: var(--color-primary-green); margin-bottom: 15px; }
+
+.progressBar {
+    width: 100%;
+    height: 20px;
+    background-color: #d6f1e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progressFill {
+    width: 0;
+    height: 100%;
+    background-color: var(--color-primary-green);
+    border-radius: 10px;
+    transition: width 1.5s ease;
+}
+
+.goalText {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ======================================= */
+/* Goal & Vision Section */
+.goalSection { margin-bottom: 50px; text-align: left; }
+.goalSection h2 { font-size: 2rem; color: var(--color-primary-green); margin-bottom: 15px; position: relative; display: inline-block; }
+.goalSection h2::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 50%; height: 3px; background-color: var(--color-primary-green); border-radius: 2px; }
+.goalContent p { font-size: 1.1rem; line-height: 1.8; color: #444; }
+
+/* ======================================= */
+/* Flex Layouts */
+.aboutUs, .ourServices, .testimonialCards { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+.aboutUsCard, .ourServicesCard, .testimonyCard { flex: 1 1 calc(25% - 11.25px); min-width: 250px; }
+
+/* ======================================= */
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 30px;
+    gap: 30px;
+}
+
+.footerSections { flex: 1 1 200px; }
+footer h3 { color: #81c784; margin-bottom: 15px; }
+footer ul { list-style: none; padding: 0; }
+footer ul li { margin-bottom: 10px; }
+footer ul li a { color: #fff; text-decoration: none; transition: color 0.3s; }
+footer ul li a:hover { color: var(--color-hover-orange); }
+.footerCopyright { width: 100%; text-align: center; margin-top: 30px; font-size: 0.9rem; color: #c8e6c9; }
+
+/* ======================================= */
+/* --- Responsive Layouts --- */
+@media (max-width: 1200px) { .aboutUsCard, .ourServicesCard, .testimonyCard { flex: 1 1 calc(33.333% - 10px); } }
+@media (max-width: 992px) {
+    nav, section { padding: 20px 30px; }
+    .navLinks { gap: 15px; }
+    .aboutUsCard, .ourServicesCard, .testimonyCard { flex: 1 1 calc(50% - 7.5px); }
+    .donationContainer { flex-direction: column; align-items: center; gap: 30px; }
+    .donationText, .donationFormContainer { max-width: 90%; }
+}
+@media (max-width: 768px) {
+    nav { flex-direction: column; align-items: flex-start; padding-bottom: 10px; }
+    .navLinks { margin-top: 15px; flex-wrap: wrap; justify-content: center; width: 100%; gap: 10px; }
+    #homeSection { justify-content: center; padding: 20px; text-align: center; }
+    .homeContent { text-align: center; }
+    .homeStatement { font-size: 2.5rem; }
+    .goalSection, .goalContent p { text-align: center; }
+}
+@media (max-width: 600px) {
+    nav, section { padding: 15px; }
+    .aboutUsCard, .ourServicesCard, .testimonyCard { flex: 1 1 100%; min-width: unset; }
+    .donationFormContainer { padding: 20px 15px; }
+    footer { flex-direction: column; align-items: center; text-align: center; padding: 40px 15px; }
+    .footerSections { width: 100%; margin-bottom: 15px; }
+}
+
+
+
+
+

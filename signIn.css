@@ -1,0 +1,199 @@
+/*
+ * COHESIVE STYLESHEET for Escape Landscaping
+ * BASE STYLE: Modern, Clean, Professional
+ * WORKER ACCENT: High-contrast, earthy green
+ * CUSTOMER ACCENT: Soft, welcoming mint green
+ */
+
+/* ============================================== */
+/* 1. BASE STYLES (Applies to Both Pages) */
+/* ============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* 2. Login Container & Card */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings & Text */
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+h3 {
+    color: #555;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Input Groups */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #5cb85c; /* Neutral focus color */
+    box-shadow: 0 0 0 3px rgba(92, 184, 92, 0.2);
+}
+
+/* ============================================== */
+/* 2. WORKER LOGIN STYLES (.worker-page) */
+/* ============================================== */
+
+.worker-page body {
+    /* Deep, professional background */
+    background: linear-gradient(135deg, #1e3a1e, #3a663a);
+    color: #333;
+}
+
+.worker-page h2 {
+    color: #1b5e20; /* Deep Forest Green */
+}
+
+.worker-page .fa-tree {
+    color: #4CAF50;
+    margin-right: 8px;
+}
+
+.worker-page .input-group label {
+    color: #1b5e20; /* Deep green labels */
+}
+
+.worker-page .input-group label .fa-solid {
+    color: #1b5e20;
+}
+
+.worker-page .btn-login {
+    background: #4CAF50; /* Primary action button */
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.worker-page .btn-login:hover {
+    background: #388e3c;
+}
+
+.worker-page .note {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* ============================================== */
+/* 3. CUSTOMER LOGIN STYLES (.customer-page) */
+/* ============================================== */
+
+.customer-page body {
+    /* Soft, welcoming background */
+    background: linear-gradient(135deg, #e0ffe0, #f0fff0); 
+    color: #333;
+}
+
+.customer-page h2 {
+    color: #004d1a; /* Darker green for a refined look */
+}
+
+.customer-page .fa-seedling {
+    color: #66bb6a; /* Lighter, more delicate accent */
+    margin-right: 8px;
+}
+
+.customer-page .input-group label {
+    color: #004d1a; /* Dark green labels */
+}
+
+.customer-page .input-group label .fa-solid {
+    color: #66bb6a;
+}
+
+.customer-page .btn-login {
+    background: #66bb6a; /* Softer, inviting button green */
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.customer-page .btn-login:hover {
+    background: #81c784;
+}
+
+/* Customer Links */
+.customer-page .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.customer-page .links a {
+    color: #004d1a;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.customer-page .links a:hover {
+    color: #66bb6a;
+    text-decoration: underline;
+}

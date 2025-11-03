@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escape Landscaping | Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    html { font-family: 'Inter', sans-serif; }
+    .adminTime {
+      display: flex;
+      gap: 10px;
+      font-weight: 500;
+      color: #c9b887; /* soft gold for time display */
+    }
+    .aboutUs {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .aboutUsCard {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 200px;
+    }
+    .aboutUsCardHeader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #f3f4f6;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .footerSections ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footerSections ul li a {
+      color: #555;
+      text-decoration: none;
+    }
+    .footerSections ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center bg-green-900 text-white p-4 shadow-md">
+    <h1 class="text-2xl font-bold">ES</h1>
+    <div class="flex items-center space-x-6">
+      <div class="adminTime">
+        <span id="time"></span>
+        <span id="day"></span>
+      </div>
+      <span id="adminName" class="font-semibold">Admin</span>
+      <a href="index.html" id="signOutBtn" class="bg-green-700 hover:bg-green-800 text-white px-3 py-1 rounded-md transition">Sign Out</a>
+    </div>
+  </nav>
+
+  <!-- Admin Activities -->
+  <section class="w-full max-w-7xl mx-auto mt-8 px-4 border-t border-gray-300 pt-8">
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 lg:gap-8">
+
+      <!-- Approval -->
+      <a href="#approval-page" class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-[1.02] text-gray-700 text-center">
+        <svg class="h-8 w-8 text-green-700 mb-2 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <path d="m9 11 3 3L22 4"></path>
+        </svg>
+        <div class="text-lg font-bold">Approval</div>
+        <div class="text-sm text-gray-500">Pending reviews & sign-offs</div>
+      </a>
+
+      <!-- Payment Request -->
+      <a href="#payment-request-page" class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-[1.02] text-gray-700 text-center">
+        <svg class="h-8 w-8 text-green-700 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+          <line x1="2" x2="22" y1="10" y2="10"></line>
+        </svg>
+        <div class="text-lg font-bold">Payment Request</div>
+        <div class="text-sm text-gray-500">Process invoices and payouts</div>
+      </a>
+
+      <!-- Workers -->
+      <a href="#workers-page" class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-[1.02] text-gray-700 text-center">
+        <svg class="h-8 w-8 text-green-700 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <div class="text-lg font-bold">Workers</div>
+        <div class="text-sm text-gray-500">Manage staff and teams</div>
+      </a>
+
+      <!-- Customers -->
+      <a href="#customers-page" class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-[1.02] text-gray-700 text-center">
+        <svg class="h-8 w-8 text-green-700 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="m19.66 1.8 3 3"/>
+          <path d="M20.9 5.1l-3-3"/>
+        </svg>
+        <div class="text-lg font-bold">Customers</div>
+        <div class="text-sm text-gray-500">View accounts and sales info</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="aboutUsSection">
+    <div class="aboutUs">
+        <div class="aboutUsCard">
+            <div class="aboutUsCardHeader">
+                <i class="fa-solid fa-people-group fa-xl text-green-700"></i>
+                <h3>Workers</h3>
+            </div>
+            <h2 id="registeredWorkers">0</h2>
+        </div>
+        <div class="aboutUsCard">
+            <div class="aboutUsCardHeader">
+                <i class="fa-solid fa-user-group fa-xl text-green-700"></i>
+                <h3>Customers</h3>
+            </div>
+            <h2 id="registeredCustomers">0</h2>
+        </div>
+        <div class="aboutUsCard">
+            <div class="aboutUsCardHeader">
+                <i class="fa-solid fa-briefcase fa-xl text-green-700"></i>
+                <h3>Jobs Completed</h3>
+            </div>
+            <h2 id="jobsCompleted">0</h2>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="flex justify-center mt-4">
+      <div class="w-80 bg-gray-200 h-5 rounded-full">
+        <div id="userProgressBar" class="bg-green-700 h-5 rounded-full w-0 transition-all duration-700"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footerSections">
+        <h3>Escape Landscaping</h3>
+        <p>Your garden is our priority</p>
+    </div>
+    <div class="footerSections">
+        <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="footerSections">
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="mailto:tornyafasaakanasuah77@gmail.com">tornyafasaakanasuah77@gmail.com</a></li>
+            <li><a href="mailto:wandalachitamba1825@gmail.com">wandalachitamba1825@gmail.com</a></li>
+            <li><a href="tel:+231888217480">+231888217480</a></li>
+        </ul>
+    </div>
+
+    <div class="footerCopyright mt-4 w-full text-center">
+        <p>&copy; 2025 Escape Landscaping. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="adminDashboard.js"></script>
+</body>
+</html>

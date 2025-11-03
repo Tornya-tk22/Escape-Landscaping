@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Landscaping</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <h1 class="logo">ES</h1>
+    <div class="menu-toggle" id="mobileMenu">
+        <i class="fa fa-bars"></i>
+    </div>
+    <ul class="navLinks" id="navLinks">
+        <li><a href="#homeSection">Home</a></li>
+        <li><a href="#aboutUsSection">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="chooseSignInType.html">Sign In</a></li>
+        <li><a href="chooseAccountType.html" class="signUpBtn">Sign Up</a></li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="homeSection">
+    <div class="homeContent">
+        <h2 class="homeStatement">Your Garden, Our Concern</h2>
+        <p class="homeParagraph">Transforming outdoor spaces into lasting beauty through creativity, care, and sustainability.</p>
+        <button id="signUpBtn">Get Started</button>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="aboutUsSection">
+    <div class="sectionTitle">
+        <h2>About Us</h2>
+        <p>We measure our success by the smiles we create in your gardens.</p>
+    </div>
+    <div class="aboutUs">
+        <div class="aboutUsCard">
+            <div class="aboutUsCardHeader">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Workers</h3>
+            </div>
+            <h2 id="registeredWorkers">0</h2>
+            <p>Our skilled team ensures your gardens are nurtured with care and expertise.</p>
+        </div>
+        <div class="aboutUsCard">
+            <div class="aboutUsCardHeader">
+                <i class="fa-solid fa-user-group"></i>
+                <h3>Customers</h3>
+            </div>
+            <h2 id="registeredCustomers">0</h2>
+            <p>We value our customers and prioritize their satisfaction in every project.</p>
+        </div>
+        <div class="aboutUsCard">
+            <div class="aboutUsCardHeader">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Jobs Completed</h3>
+            </div>
+            <h2 id="jobsCompleted">0</h2>
+            <p>We consistently deliver high-quality landscaping projects on time.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Goal & Vision -->
+<section id="goal-vision" class="goalVisionContainer">
+    <div class="topRow">
+        <!-- Goal -->
+        <section id="goalSection" class="goalSection">
+            <div class="sectionTitle">
+                <h2>Our Goal</h2>
+                <p>Creating sustainable and vibrant green spaces for communities.</p>
+            </div>
+            <div class="goalContent">
+                <p>At Escape Landscaping, our goal is to create vibrant, sustainable outdoor spaces that not only enhance the beauty and health of 
+                    every property but also inspire and positively impact our community, especially teenagers. Through hands-on projects, internships, and volunteering opportunities, 
+                    we encourage young people to develop valuable skills, 
+                    a love for nature, and a sense of responsibility toward the environment. By combining creativity, eco-friendly practices, and community engagement,
+                    we aim to transform gardens and green spaces into thriving environments that foster growth, learning, and lasting joy for all.</p>
+            </div>
+        </section>
+
+        <!-- Vision -->
+        <section id="visionSection" class="goalSection">
+            <div class="sectionTitle">
+                <h2>Our Vision</h2>
+            </div>
+            <div class="goalContent">
+                <p>
+                    Our vision is to cultivate a greener, healthier, and more vibrant community where gardens inspire creativity, beauty, 
+                    and sustainability. We aim to empower teenagers through hands-on involvement and mentorship, nurturing the next generation 
+                    of environmentally conscious leaders, while growing our platform to reach at least 500 active users by 2027.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Progress Bar Below -->
+    <section class="goalSection progressSection">
+        <div class="sectionTitle">
+            <h2>Vision Progress</h2>
+            <p>Tracking our growth towards 500 users</p>
+        </div>
+        <div class="progressCard">
+            <div class="progressContent">
+                <p>Current Users</p>
+                <h3 id="userCount">0</h3>
+                <div class="progressBar">
+                    <div class="progressFill" id="progressFill"></div>
+                </div>
+                <p class="goalText">Goal: 500 Users</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Services Section -->
+<section id="ourServices">
+    <div class="sectionTitle">
+        <h2>Our Services</h2>
+        <p>Expert care for every corner of your garden.</p>
+    </div>
+    <div class="ourServices">
+        <div class="ourServicesCard">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Lawn Care & Maintenance</h3>
+            <p>We keep your lawn lush, green, and perfectly manicured through regular mowing, watering, and expert care.</p>
+        </div>
+        <div class="ourServicesCard">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Garden Design & Planting</h3>
+            <p>We create stunning garden layouts and plant selections that bring harmony, color, and beauty to any space.</p>
+        </div>
+        <div class="ourServicesCard">
+            <i class="fa-solid fa-scissors"></i>
+            <h3>Trimming</h3>
+            <p>We expertly trim trees, shrubs, and hedges to maintain clean shapes and encourage healthy, balanced growth.</p>
+        </div>
+        <div class="ourServicesCard">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Gardening</h3>
+            <p>We design and maintain beautiful gardens with healthy plants, ensuring vibrant landscapes all year round.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Donation Section -->
+<section id="donate">
+    <div class="sectionTitle">
+        <h2>Support Our Work</h2>
+        <p>Your contribution helps us create and maintain green spaces that enrich lives.</p>
+    </div>
+    <div class="donationContainer">
+        <div class="donationText">
+            <p>When you give, you grow hope. Your support turns dry spaces into living gardens and helps us bring nature back to our neighborhoods. Every contribution helps us nurture more green spaces and beautiful gardens for the community.</p>
+        </div>
+        <div class="donationFormContainer">
+            <h3>Make a Donation</h3>
+            <form>
+                <input type="number" name="donateAmount" placeholder="Amount (min $20)" min="20" required>
+                <input type="email" name="donatorEmail" placeholder="Email" required>
+                <button type="submit">Donate Now</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonial">
+    <div class="sectionTitle">
+        <h2>Testimonials</h2>
+        <p>See what our customers are saying</p>
+    </div>
+    <div class="testimonialCards">
+        <div class="testimonyCard">
+            <p>"Excellent service and attention to detail!"</p>
+            <div class="testimonialDetails">
+                <p>12 Oct 2025</p>
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div class="testimonyCard">
+            <p>"My garden has never looked better!"</p>
+            <div class="testimonialDetails">
+                <p>05 Oct 2025</p>
+                <p>John Smith</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footerSections">
+        <h3>Escape Landscaping</h3>
+        <p>Your garden is our priority</p>
+    </div>
+    <div class="footerSections">
+        <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#aboutUsSection">About Us</a></li>
+            <li><a href="#donate">Donate</a></li>
+        </ul>
+    </div>
+    <div class="footerSections">
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="mailto:tornyafasaakanasuah77@gmail.com">tornyafasaakanasuah77@gmail.com</a></li>
+            <li><a href="mailto:wandalachitamba1825@gmail.com">wandalachitamba1825@gmail.com</a></li>
+            <li><a href="tel:+231888217480">+231888217480</a></li>
+        </ul>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footerCopyright">
+        <p>&copy; 2025 Escape Landscaping. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js" type="module"></script>
+
+</body>
+</html>

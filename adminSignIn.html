@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Landscaping | Admin Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    /*Admin dashboard*/
+/*
+ * DARK MODE STYLESHEET for Escape Landscaping Admin Login
+ * Aesthetic: Modern, Dark, Sophisticated
+ * Primary Color: Deep Emerald Green
+ */
+
+/* 1. Global & Body Styles (The Dark Canvas) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Dark background for the body */
+    background-color: #ffffff; /* Deep purple/blue background */
+    color: #e0e0e0; /* Light text for contrast */
+}
+
+/* 2. Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* 3. Login Card (The Centerpiece) */
+.login-card {
+    background-color: #ffffff; /* Slightly lighter card background */
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    /* Modern, deep box shadow for a 'lifted' effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.194), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-3px); /* Subtle hover lift */
+}
+
+/* Headings */
+h2 {
+    color: #4CAF50; /* A vibrant green for the company name */
+    margin-bottom: 5px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+h3 {
+    color: #b0b0b0;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.fa-seedling {
+    color: #4CAF50; /* Match the brand name color */
+    margin-right: 8px;
+}
+
+/* 4. Form and Inputs */
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #5c5c5c;
+}
+
+label .fa-solid {
+    margin-right: 5px;
+    color: #686868; /* Icon color */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #616192; /* Darker border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Input field background */
+    color: #e0e0e0;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50; /* Green highlight on focus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.4);
+}
+
+/* Placeholder text color */
+::placeholder {
+    color: #8888b8;
+    opacity: 1;
+}
+
+/* 5. Button */
+.btn-login {
+    width: 100%;
+    background-color: #4CAF50; /* Primary button color: Deep Emerald Green */
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.btn-login:hover {
+    background-color: #43A047; /* Slightly darker green on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-login:active {
+    transform: translateY(1px); /* Push button down on click */
+}
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-card">
+      <h2><i class="fa-solid fa-seedling"></i> Escape Landscaping</h2>
+      <h3>Admin Sign In</h3>
+
+      <form id="adminLoginForm">
+        <div class="input-group">
+          <label for="email"><i class="fa-solid fa-envelope"></i>Admin Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter admin email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password"><i class="fa-solid fa-lock"></i>Admin Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter admin password" required>
+        </div>
+
+        <button type="submit" class="btn-login">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="adminLogin.js"></script>
+</body>
+</html>

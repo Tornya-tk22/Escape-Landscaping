@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chooseAccountContainer a{
+            color: white;
+        }
+        .allContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            border: none;
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            width: auto;
+            height: auto;
+        }
+        h1{
+            color: #2e7d32;
+        }
+        button a{
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="allContainer">
+        <h1>SignIn As:</h1>
+        <div class="chooseAccountContainer">
+            <button id="signUpBtn"><a href="customerSignIn.html">Customer</a></button>
+            <button id="signUpBtn"><a href="workerSignIn.html">Worker</a></button>
+            <button id="signUpBtn"><a href="adminSignIn.html">Admin</a></button>
+        </div>
+    </div>
+</body>
+</html>

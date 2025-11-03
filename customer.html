@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Landscaping | Sign Up</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <h2>SignUp as Customers</h2>
+            <form id="customerSignUpForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="number" id="age" min="13" placeholder="Age" required>
+
+                <div id="parentContainer" style="display:none;">
+                    <label>
+                        <input type="checkbox" id="parentCheckBox">
+                        *ONLY PARENTS ALLOWED* – Do you agree your kid joining ESCAPE LANDSCAPING?
+                    </label>
+                </div>
+                <select name="city" id="city">
+                    <option value="" disabled selected>Select City</option>
+                    <option value="minneapolis">Minneapolis</option>
+                    <option value="saint-paul">Saint Paul</option>
+                    <option value="rochester">Rochester</option>
+                    <option value="duluth">Duluth</option>
+                    <option value="bloomington">Bloomington</option>
+                    <option value="brooklyn-park">Brooklyn Park</option>
+                    <option value="plymouth">Plymouth</option>
+                    <option value="maple-grove">Maple Grove</option>
+                    <option value="woodbury">Woodbury</option>
+                    <option value="eagan">Eagan</option>
+                    <option value="blaine">Blaine</option>
+                    <option value="lakeville">Lakeville</option>
+                    <option value="eden-prairie">Eden Prairie</option>
+                    <option value="burnsville">Burnsville</option>
+                    <option value="coon-rapids">Coon Rapids</option>
+                    <option value="minnetonka">Minnetonka</option>
+                    <option value="apple-valley">Apple Valley</option>
+                    <option value="st-louis-park">St. Louis Park</option>
+                    <option value="shakopee">Shakopee</option>
+                    <option value="maplewood">Maplewood</option>
+                    <option value="cottage-grove">Cottage Grove</option>
+                    <option value="inver-grove-heights">Inver Grove Heights</option>
+                    <option value="edina">Edina</option>
+                    <option value="richfield">Richfield</option>
+                    <option value="roseville">Roseville</option>
+                    <option value="savage">Savage</option>
+                    <option value="andover">Andover</option>
+                    <option value="mankato">Mankato</option>
+                    <option value="elk-river">Elk River</option>
+                    <option value="faribault">Faribault</option>
+                    <option value="chaska">Chaska</option>
+                    <option value="chanhassen">Chanhassen</option>
+                    <option value="owatonna">Owatonna</option>
+                    <option value="winona">Winona</option>
+                    <option value="stillwater">Stillwater</option>
+                </select>
+
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="login-link">
+                Already have an account? <a href="customerSignIn.html">Sign In</a>
+            </div>
+        </div>
+    </div>
+    <script src="customer.js"></script>
+</body>
+</html>
