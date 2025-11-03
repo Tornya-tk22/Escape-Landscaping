@@ -26,7 +26,15 @@ const registeredWorkers = document.getElementById("registeredWorkers");
 let numberOfWorkers = Registered_Workers.length;
 registeredWorkers.textContent = numberOfWorkers;
 
+
 //Get the total number of customers and workers in the system
 const userCount = document.getElementById("userCount");
 const totalUsers = numberOfCustomers + numberOfWorkers;
 userCount.textContent = totalUsers;
+const goalUsers = 500; // Example target
+const progressBar = document.getElementById("progressFill"); // create in HTML
+
+if (progressBar) {
+    const percentage = Math.min((totalUsers / goalUsers) * 100, 100);
+    progressBar.style.width = percentage + "%";
+}
